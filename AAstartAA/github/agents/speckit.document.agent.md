@@ -193,7 +193,6 @@ Copy and run:
 | # | Question | Impact | Suggested Default |
 |---|----------|--------|-------------------|
 | 1 | {question} | {impact} | {default} |
-| 2 | {question} | {impact} | {default} |
 
 **Recommendation**: {Run /speckit.clarify | Skip - requirements are clear enough}
 
@@ -204,40 +203,17 @@ Copy and run:
 ### Technical Recommendations
 
 | Aspect | Recommendation | Rationale |
-|--------|---------------|-----------|
+|--------|---------------|-----------||
 | Language | {suggestion or "User choice"} | {why} |
 | Framework | {suggestion or "User choice"} | {why} |
-| Storage | {suggestion or "N/A"} | {why} |
-| Architecture | {suggestion} | {why} |
 
 ### Optimized Input for `/speckit.plan`
 
 Copy and run:
 
 ```
-/speckit.plan {tech stack and architecture description based on recommendations or user preferences}
+/speckit.plan {tech stack and architecture description}
 ```
-
----
-
-## Phase 5: Checklist Input (Optional)
-
-### Suggested Checklist Focus Areas
-
-- [ ] **{Area 1}** - {Why this matters for this feature}
-- [ ] **{Area 2}** - {Why this matters for this feature}
-
----
-
-## Phase 6-8: Automated Phases
-
-These phases are largely automated based on previous outputs:
-
-| Phase | Command | Input |
-|-------|---------|-------|
-| 6 | `/speckit.tasks` | Auto-generated from plan |
-| 7 | `/speckit.analyze` | Auto-analyzes spec/plan/tasks |
-| 8 | `/speckit.implement` | Executes task list |
 
 ---
 
@@ -247,28 +223,10 @@ These phases are largely automated based on previous outputs:
 
 1. `/speckit.constitution {copy Phase 1 input}`
 2. `/speckit.specify {copy Phase 2 input}`
-3. `/speckit.clarify` (Optional)
+3. `/speckit.clarify` (optional)
 4. `/speckit.plan {copy Phase 4 input}`
-5. `/speckit.checklist {focus-area}` (Optional)
-6. `/speckit.tasks`
-7. `/speckit.analyze` (Optional)
-8. `/speckit.implement`
-
----
-
-## Traceability
-
-| User Said | Interpreted As | Phase Impact |
-|-----------|---------------|--------------|
-| "{original phrase}" | "{structured interpretation}" | {which phase} |
-
----
-
-## Risk Assessment
-
-| Risk | Likelihood | Impact | Mitigation |
-|------|------------|--------|------------|
-| {risk from ambiguity} | L/M/H | L/M/H | {address in which phase} |
+5. `/speckit.tasks`
+6. `/speckit.implement`
 
 ---
 
@@ -283,16 +241,16 @@ These phases are largely automated based on previous outputs:
 
 ## Post-Generation Summary
 
-After creating the intake document, provide this summary to the user:
+After creating the intake document, provide this summary:
 
 ```
 ✓ Intake analysis complete
 
   Feature: {feature-name}
-  Output:  .specify/intake/{feature-slug}/intake.md
+  Output: .specify/intake/{feature-slug}/intake.md
   
   Constitution: {Exists - {N} principles | Not found - create first}
-  Ambiguities:  {N identified | None - requirements clear}
+  Ambiguities: {N identified | None - requirements clear}
   
   Recommended workflow:
   1. {First command with brief note}
